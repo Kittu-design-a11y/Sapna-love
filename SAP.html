@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sapna ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: #7a7a7a;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart {
+    position: fixed;
+    bottom: -20px;
+    color: red;
+    font-size: 20px;
+    animation: floatUp 6s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-100vh); opacity: 0; }
+}
+
+.box {
+    background: white;
+    padding: 26px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+.name {
+    font-size: 26px;
+    font-weight: bold;
+    color: #1a2980;
+}
+
+.question {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1a2980;
+    margin-top: 10px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    margin: 12px;
+}
+
+#yesBtn {
+    background: #4CAF50;
+    color: white;
+}
+
+#noBtn {
+    background: #f8b4c0;
+    color: #5a1a2c;
+    position: fixed;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.popup-content {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    width: 85%;
+    position: relative;
+}
+
+.popup-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ff4d6d;
+    margin-bottom: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #555;
+}
+</style>
+</head>
+
+<body>
+
+<script>
+for (let i = 0; i < 18; i++) {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+    document.body.appendChild(heart);
+}
+</script>
+
+<div class="box">
+    <div class="name">Sapna ❤️</div>
+
+    <div class="question">
+        Can you love me? 🥰
+    </div>
+
+    <button id="yesBtn" onclick="showLove()">Yes 💖</button>
+    <button id="noBtn" ontouchstart="moveNo()" onmouseover="moveNo()">No 💔</button>
+
+    <!-- 💖 ROMANTIC MESSAGE -->
+    <p id="romanticMsg" style="display:none; color:#b03060; font-size:14px; margin-top:8px;">
+        ಇಲ್ಲ ಎಂದರೂ ನಾನು ನಿನ್ನನ್ನು ಒತ್ತಾಯಿಸುವುದಿಲ್ಲ 😊
+ಆದರೆ ಒಂದು ಅವಕಾಶ ಕೊಟ್ಟರೆ…
+ನಿನ್ನ ಜೀವನದಲ್ಲಿ ನಗುವಾಗಿರಲು ನಾನು ಪ್ರಯತ್ನಿಸುತ್ತೇನೆ ❤️
+
+ನಿನ್ನ ಜೊತೆಗೆ ಮಾತನಾಡಿದಾಗ ಮನಸ್ಸು ಶಾಂತವಾಗುತ್ತದೆ 💕
+ಒಮ್ಮೆ ನನ್ನನ್ನು ನಂಬಿ ನೋಡಿ…
+ನಿನ್ನ ಹೃದಯವನ್ನು ನೋಯಿಸುವುದಿಲ್ಲ ಎಂದು ನಾನು ಮಾತು ಕೊಡುತ್ತೇನೆ ❤️
+
+ನಿನ್ನ ಉತ್ತರಕ್ಕೆ ನಾನು ಗೌರವ ಕೊಡುತ್ತೇನೆ 😊
+ಆದರೂ ಒಂದು ಚಿಕ್ಕ ಅವಕಾಶ…
+ನಿನ್ನ ಜೊತೆ ನನ್ನ ಸತ್ಯ ಭಾವನೆಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳಲು 💖
+        
+ಒಮ್ಮೆ ‘ಸರಿ’ ಅಂತ ಹೇಳಿ ನೋಡಿ ❤️
+ನಿನ್ನ ಪ್ರತಿದಿನವೂ ವಿಶೇಷವಾಗಿಸಲು ನಾನು ಪ್ರಯತ್ನಿಸುತ್ತೇನೆ.
+ಇದು ಒತ್ತಾಯವಲ್ಲ… ಒಂದು ಪ್ರಾರ್ಥನೆ 💕
+
+ನಿನ್ನ ನಗು ನನ್ನ ದುರ್ಬಲತೆ 😊
+ಒಮ್ಮೆ ಅವಕಾಶ ಕೊಟ್ಟರೆ…
+ಆ ನಗುವಿನ ಕಾರಣವಾಗಲು ನಾನು ಬಯಸುತ್ತೇನೆ ❤️
+
+ಒಮ್ಮೆ ‘ಸರಿ’ ಅಂತ ಹೇಳಿ ನೋಡಿ ❤️
+ನಿನ್ನ ಪ್ರತಿದಿನವೂ ವಿಶೇಷವಾಗಿಸಲು ನಾನು ಪ್ರಯತ್ನಿಸುತ್ತೇನೆ.
+    </p>
+</div>
+
+<div id="popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">✖</span>
+
+    <!-- POPUP IMAGE -->
+    <img src="sanika.jpeg?v=2" class="popup-img">
+
+    <h2>Congratulations 🎉❤️</h2>
+    <p>
+      Sapna 🥰 <br>
+      My heart is yours now ❤️ <br>
+      I love you so much 💖
+    </p>
+  </div>
+</div>
+
+<script>
+function moveNo() {
+    const btn = document.getElementById("noBtn");
+    const msg = document.getElementById("romanticMsg");
+
+    msg.style.display = "block";
+
+    const maxX = window.innerWidth - btn.offsetWidth;
+    const maxY = window.innerHeight - btn.offsetHeight;
+
+    btn.style.left = Math.random() * maxX + "px";
+    btn.style.top = Math.random() * maxY + "px";
+}
+
+function showLove() {
+    document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
+
+
